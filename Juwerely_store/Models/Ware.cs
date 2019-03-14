@@ -30,7 +30,7 @@ namespace Juwerely_store.Models
 
         string name;
         string about;
-        byte[] image;
+        string imageSource;
         Category wareCatergory;
         Material wareMaterial;
         double price;
@@ -76,12 +76,12 @@ namespace Juwerely_store.Models
             }
         }
 
-        public byte[] Image
+        public string ImageSource
         {
-            get => image;
+            get => imageSource;
             set
             {
-                image = value;
+                imageSource = value;
                 OnPropertyChanged();
             }
         }
