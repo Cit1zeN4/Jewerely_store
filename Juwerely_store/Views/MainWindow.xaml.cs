@@ -24,5 +24,44 @@ namespace Juwerely_store
         {
             InitializeComponent();
         }
+
+        private void ButtonOpenWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+            }
+            else
+            {
+                WindowState = WindowState.Maximized;
+            }
+
+        }
+
+        private void ButtonHide_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ListViewMenug_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = ListViewMenug.SelectedIndex;
+            MoveCursorMenu(index);
+        }
+
+        private void MoveCursorMenu(int index)
+        {
+            TransitionContentSlide.OnApplyTemplate();
+            GridCursor.Margin = new Thickness(0, (73 + (70 * index)), 0, 0);
+        }
+
+
+
+
     }
 }

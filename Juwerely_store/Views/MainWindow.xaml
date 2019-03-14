@@ -4,10 +4,103 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Juwerely_store"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-         
+        Title="EMILIYA" Height="730" Width="1024" WindowStyle="None" WindowStartupLocation="CenterScreen" Focusable="False">
 
+
+    <Grid Background="Black" Margin="0,0,-0.4,0.2">
+        <StackPanel VerticalAlignment="Top" Margin="0,-2,0,0">
+            <Grid Background="Black" Height="27" Margin="0,0,-0.2,0">
+                <Grid Margin="6,5,-0.2,5" Height="32" >
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+
+                    </StackPanel>
+                    <Grid Margin="-4,0,1,9">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,-0.2,9.2" >
+                            <Button  x:Name="ButtonHide"  Width="30" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="White" Click="ButtonHide_Click" Margin="0,0,0,-1.6">
+                                <materialDesign:PackIcon Kind="WindowMinimize" Height="17" Width="20"/>
+                            </Button>
+                            <Button  x:Name="ButtonOpenWindow" Click="ButtonOpenWindow_Click" Width="22" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="White" Margin="0,0,0,-1.6">
+                                <materialDesign:PackIcon Kind="Fullscreen"/>
+                            </Button>
+                            <Button  x:Name="ButtonFechar"  Width="30" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="White" Click="ButtonFechar_Click" Margin="0,0,0,-1.6">
+                                <materialDesign:PackIcon Kind="Power" Height="17" Width="20"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+
+        <Grid Width="276" HorizontalAlignment="Left" Margin="0,0,0,-0.4" Background="Black" >
+            <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0:0.3}" Margin="-1,0,-14,0">
+                <Grid x:Name ="GridCursor" Margin="0,73,0,0" Background="#FFFD9B50" Width="10"  Height="70" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                </Grid>
+            </materialDesign:TransitioningContent>
+            <ListView x:Name="ListViewMenug" Margin="-2,73,-5,0" Foreground="#FFFD9B50" SelectionChanged="ListViewMenug_SelectionChanged" Height="644" VerticalAlignment="Top">
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"  />
+                        <TextBlock Text="Главная" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva" />
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ViewSplitVertical" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Каталог" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.152"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="TurnedInNot" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Бренды" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="People" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Сотрудники" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="PhoneInTalk" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Контакты" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Create" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Monotype Corsiva"/>
+                        <TextBlock Text="Советы" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Workflow" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Сети магазинов" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="70">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Receipt" Width="30" Height="30" VerticalAlignment="Center" Margin="5" FontFamily="Century Gothic"/>
+                        <TextBlock Text="Вакансии" FontSize="30" VerticalAlignment="Center" Margin="20 0" FontFamily="Monotype Corsiva"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>
