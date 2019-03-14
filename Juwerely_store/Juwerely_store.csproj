@@ -92,6 +92,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\AcceptJogView.xaml.cs">
       <DependentUpon>AcceptJogView.xaml</DependentUpon>
     </Compile>

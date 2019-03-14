@@ -106,6 +106,16 @@ namespace Juwerely_store.Models
             }
         }
 
+        public double Price
+        {
+            get => price;
+            set
+            {
+                price = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
     }
 }
