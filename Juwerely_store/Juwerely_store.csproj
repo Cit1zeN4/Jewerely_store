@@ -67,6 +67,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\BrendView.xaml.cs">
+      <DependentUpon>BrendView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactView.xaml.cs">
+      <DependentUpon>ContactView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkerView.xaml.cs">
+      <DependentUpon>WorkerView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BrendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ContactView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +99,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,7 +135,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Res\MainPage\Lady3.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Helpers\info.txt" />
   </ItemGroup>
@@ -116,6 +146,29 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ViewModels\info.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\BrendPage\4.jpg" />
+    <Resource Include="Res\BrendPage\e.jpeg" />
+    <Resource Include="Res\BrendPage\Es.jpg" />
+    <Resource Include="Res\BrendPage\pes.jpg" />
+    <Resource Include="Res\BrendPage\S.jpg" />
+    <Resource Include="Res\BrendPage\SL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\BrendPage\Lady3.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Res\WorkerPage\admin.jpg" />
+    <Resource Include="Res\WorkerPage\director.jpg" />
+    <Resource Include="Res\WorkerPage\Бухгалтер.jpg" />
+    <Resource Include="Res\WorkerPage\ВероникаБоцман.jpg" />
+    <Resource Include="Res\WorkerPage\ДмитрийСавчук.jpg" />
+    <Resource Include="Res\WorkerPage\ЕлизаветаПектаева.jpeg" />
+    <Resource Include="Res\WorkerPage\КристинаКеримова.jpg" />
+    <Resource Include="Res\WorkerPage\Юлия.jpg" />
+    <Resource Include="Res\WorkerPage\ЮлияМартисюк.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

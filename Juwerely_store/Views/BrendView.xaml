@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="Juwerely_store.Views.BrendView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"            
+             xmlns:local="clr-namespace:Juwerely_store.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1024">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0:0.9}" Margin="-1,0,-14,0">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="360"/>
+                    <ColumnDefinition Width="360"/>
+                    <ColumnDefinition Width="360"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Column="0" Grid.Row="0">
+                    <materialDesign:Card Width="330" Height="298" Margin="18,1,12,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/S.jpg" Height="Auto"  Stretch="UniformToFill" Margin="0,-1,0.6,88.4" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="27" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">SOKOLOV</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <materialDesign:Card Width="330" Height="291" Margin="18,1,12,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/pes.jpg" Height="216"  Stretch="UniformToFill" Margin="0,-1,0.6,0" VerticalAlignment="Top" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="29" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">PESAVENTO</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+                <Grid Grid.Column="2" Grid.Row="0">
+                    <materialDesign:Card Width="330" Height="290" Margin="18,1,12,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/e.jpeg" Height="Auto"  Stretch="UniformToFill" Margin="0,-1,0.6,78.4" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="26" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">DEL' TA</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="1" Margin="0,6,0,0">
+                    <materialDesign:Card Width="330" Height="349" Margin="12,1,6.6,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid Margin="0,0,-0.4,70.8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/Lady3.jpg" Height="Auto"  Stretch="UniformToFill" Margin="0,-1,1,68.4" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="21" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">EMILIYA</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1" Margin="0,6,0,0">
+                    <materialDesign:Card Width="330" Height="349" Margin="12,1,6.6,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid Margin="0,0,-0.4,66.8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/4.jpg" Height="Auto" Margin="0,-1,1,75.6" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="26" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">DIAMOND</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+                <Grid Grid.Column="2" Grid.Row="1" Margin="0,6,0,0">
+                    <materialDesign:Card Width="330" Height="349" Margin="12,1,6.6,0" HorizontalAlignment="Center" RenderTransformOrigin="0.389,0.492">
+                        <Grid Margin="0,0,-0.4,66.8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Source="/Res/BrendPage/SL.jpg" Height="Auto" Margin="0,-1,1,72.6" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Margin="8 24 8 4">
+                                <TextBlock  Style="{StaticResource MaterialDesignSubheadingTextBlock}" Margin="2,0,-7.4,0" Height="24" RenderTransformOrigin="0.493,-0.108" FontSize="25" FontFamily="Monotype Corsiva">SUNLIGHT</TextBlock>
+                                <Viewbox Margin="0 4 0 8"  Height="16" HorizontalAlignment="Left">
+                                    <materialDesign:RatingBar Value="5" Orientation="Horizontal"  Foreground="Gold" Margin="0" />
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Margin="0,0,0.2,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
