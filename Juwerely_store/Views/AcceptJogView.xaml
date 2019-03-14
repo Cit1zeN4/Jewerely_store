@@ -6,12 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Juwerely_store"
         mc:Ignorable="d"
-        Title="AcceptJogViewxaml" Height="450" Width="800">
+        Title="AcceptJogViewxaml" Height="450" Width="800" Background="Black">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0:0.3}" Margin="0,0,0,-2.6">
 
             <ScrollViewer>
-                <Grid Background="Black">
+                <Grid Margin="20 0 0 0" Background="Black">
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>

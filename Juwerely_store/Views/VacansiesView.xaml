@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="1024
              ">
     <Grid>
-        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0:0.9}" Margin="-1,0,-14,0">
+        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0:0.9}" Margin="-1,0,-14,0">
             <Grid>
 
                 <Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
-    Администратор
+                                    Администратор
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 30 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
@@ -85,10 +85,10 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 0" FontSize="26">
-   Системный
+                                    Системный
                                 </TextBlock>
                                 <TextBlock Foreground="White"  Margin="16 0 12 8" FontSize="26">
-    Администратор
+                                    Администратор
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 40 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
@@ -143,7 +143,7 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
-Секретарь-референт
+                                    Секретарь-референт
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 35 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
@@ -204,10 +204,10 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 0" FontSize="26">
-    Аналитик отдела
+                                    Аналитик отдела
                                 </TextBlock>
                                 <TextBlock Foreground="White"  Margin="16 0 12 8" FontSize="26">
-    продаж
+                                    продаж
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 35 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
@@ -269,7 +269,7 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
-    Бухгалтер
+                                    Бухгалтер
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 28 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
@@ -326,7 +326,7 @@
                             <StackPanel>
 
                                 <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
-    Продавец-кассир
+                                    Продавец-кассир
                                 </TextBlock>
                                 <TextBlock Margin="16 0 12 8"  Text="от 20 000р." Foreground="White" FontSize="16"/>
                                 <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">

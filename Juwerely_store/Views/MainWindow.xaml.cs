@@ -48,20 +48,5 @@ namespace Juwerely_store
             Application.Current.Shutdown();
         }
 
-        private void ListViewMenug_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            int index = ListViewMenug.SelectedIndex;
-            MoveCursorMenu(index);
-        }
-
-        private void MoveCursorMenu(int index)
-        {
-            TransitionContentSlide.OnApplyTemplate();
-            GridCursor.Margin = new Thickness(0, (73 + (70 * index)), 0, 0);
-        }
-
-
-
-
     }
 }

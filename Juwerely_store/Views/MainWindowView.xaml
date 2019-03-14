@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1024">
     <Grid>
-        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0:0.9}" Margin="-1,0,-14,0"> 
+        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0:0.9}" Margin="-1,0,-14,0"> 
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
