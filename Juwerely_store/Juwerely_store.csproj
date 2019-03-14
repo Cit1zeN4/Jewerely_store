@@ -143,6 +143,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Helpers\BaseCommand.cs" />
+    <Compile Include="Helpers\ConnectionControl.cs" />
+    <Compile Include="Models\JewerelyContext.cs" />
+    <Compile Include="Models\Ware.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
