@@ -25,7 +25,7 @@ namespace Juwerely_store.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\SQLEXPRESS")]
         public string DBServerName {
             get {
                 return ((string)(this["DBServerName"]));
@@ -37,7 +37,7 @@ namespace Juwerely_store.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Jewerely_store")]
         public string DBDatabaseName {
             get {
                 return ((string)(this["DBDatabaseName"]));

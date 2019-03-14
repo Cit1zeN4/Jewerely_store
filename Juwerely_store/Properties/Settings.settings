@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="DBServerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">.\SQLEXPRESS</Value>
     </Setting>
     <Setting Name="DBDatabaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Jewerely_store</Value>
     </Setting>
     <Setting Name="DBUseIntegratedSecurity" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
