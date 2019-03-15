@@ -117,6 +117,9 @@
     <Compile Include="Views\VacansiesView.xaml.cs">
       <DependentUpon>VacansiesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WareView.xaml.cs">
+      <DependentUpon>WareView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WorkerView.xaml.cs">
       <DependentUpon>WorkerView.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VacansiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WareView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,7 +225,9 @@
   <ItemGroup>
     <Resource Include="Res\BrendPage\Lady3.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Res\DbImage\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\WorkerPage\admin.jpg" />
     <Resource Include="Res\WorkerPage\director.jpg" />

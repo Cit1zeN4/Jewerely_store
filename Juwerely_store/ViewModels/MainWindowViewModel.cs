@@ -1,4 +1,5 @@
 ﻿using Juwerely_store.Helpers;
+using Juwerely_store.Models;
 using Juwerely_store.Views;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,9 @@ namespace Juwerely_store.ViewModels
             {
                 case 1:
                     CurrentView = new MainWindowView();
+                    break;
+                case 2:
+                    CurrentView = new WareView();
                     break;
                 case 3:
                     CurrentView = new BrendView();
