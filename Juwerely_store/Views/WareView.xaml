@@ -4,9 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Juwerely_store.Views"
+             xmlns:viewModel="clr-namespace:Juwerely_store.ViewModels"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+
+        <viewModel:WareViewModel x:Key="wareVM"/>
+
+    </UserControl.Resources>
+    
+    
     <Grid>
         <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0:0.9}">
             <Grid>
@@ -18,25 +27,51 @@
 
                 </Grid.RowDefinitions>
 
-                <StackPanel Orientation="Horizontal" Background="#FFFD9B50">
+                <Grid Background="#FFFD9B50">
 
-                    <ComboBox Width="180" Height="40" Margin="10 0 10 0">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox
+                        Grid.Column="0"
+                        Width="180" Height="40" 
+                        Margin="10 0 10 0"
+                        materialDesign:HintAssist.Hint="Категория"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                        ItemsSource="{Binding Categories, Source={StaticResource wareVM}}"
+                        SelectedItem="{Binding SelectedCategory, Source={StaticResource wareVM}}"
+                        SelectedIndex="0">
                         <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text=""/>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
-                    <ComboBox Width="180" Height="40" Margin="10 0 10 0">
+                    <ComboBox 
+                        Grid.Column="1"
+                        Width="180" Height="40" 
+                        Margin="10 0 10 0"
+                        materialDesign:HintAssist.Hint="Материал"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                        ItemsSource="{Binding Materials, Source={StaticResource wareVM}}"
+                        SelectedItem="{Binding SelectedMaterial, Source={StaticResource wareVM}}"
+                        SelectedIndex="0">
                         <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text=""/>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
                     <TextBox
+                        Grid.Column="2"
                         Width="320" Height="40"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         Text="">
@@ -53,9 +88,20 @@
                         </materialDesign:HintAssist.Hint>
                     </TextBox>
 
-                </StackPanel>
-                
-                
+                    <Button
+                        Background="Black"
+                        BorderBrush="Black"
+                        Grid.Column="3" 
+                        Width="40" Height="40" 
+                        HorizontalAlignment="Right" 
+                        Margin="0 0 20 0"
+                        Padding="0">
+
+                        <materialDesign:PackIcon Kind="Search" Foreground="White"/>
+
+                    </Button>
+
+                </Grid>
 
             </Grid>
         </materialDesign:TransitioningContent>

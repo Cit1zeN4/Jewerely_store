@@ -41,6 +41,7 @@ namespace Juwerely_store.Models
 
         public enum Category
         {
+            All,
             Ring,
             Earring,
             Chainlet,
@@ -50,6 +51,7 @@ namespace Juwerely_store.Models
 
         public enum Material
         {
+            All,
             Gold,
             Silver
         }

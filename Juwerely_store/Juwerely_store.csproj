@@ -93,6 +93,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\WareViewModel.cs" />
     <Compile Include="Views\AcceptJogView.xaml.cs">
       <DependentUpon>AcceptJogView.xaml</DependentUpon>
     </Compile>
