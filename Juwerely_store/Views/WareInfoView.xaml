@@ -1,0 +1,41 @@
+﻿<Window x:Class="Juwerely_store.Views.WareInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Juwerely_store.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Info" Height="698.038" Width="529.693">
+    
+    <Grid Background="Black">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Image x:Name="WareImage" Stretch="UniformToFill"/>
+
+        <StackPanel Grid.Row="1" Margin="0 20 0 0">
+
+            <TextBlock x:Name="WareName" FontSize="20" Margin="20 0 20 10" Foreground="#FFFD9B50"/>
+            <TextBlock x:Name="WareAbout" FontSize="15" Margin="20 0 20 10" TextWrapping="Wrap" Foreground="White"/>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <TextBlock VerticalAlignment="Center" Margin="0 0 20 0" x:Name="WarePrice" FontSize="20" Foreground="White"/>
+
+            <Button Background="#FFFD9B50" Width="70" Height="40" Padding="0" BorderBrush="{x:Null}" Click="Button_Click">
+                <materialDesign:PackIcon Kind="Cart" Height="30" Width="30"/>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

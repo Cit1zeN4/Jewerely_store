@@ -118,6 +118,9 @@
     <Compile Include="Views\VacansiesView.xaml.cs">
       <DependentUpon>VacansiesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WareInfoView.xaml.cs">
+      <DependentUpon>WareInfoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WareView.xaml.cs">
       <DependentUpon>WareView.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VacansiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WareInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

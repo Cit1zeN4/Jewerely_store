@@ -245,8 +245,8 @@ namespace Juwerely_store.ViewModels
         private void Search()
         {
             // 000
-            if (SelectedCategory.Category == Ware.Category.All 
-                && SelectedMaterial.Material == Ware.Material.All 
+            if (SelectedCategory.Category == Ware.Category.All
+                && SelectedMaterial.Material == Ware.Material.All
                 && SearchString == "")
             {
                 using (var context = new JewerelyContext())
@@ -255,8 +255,8 @@ namespace Juwerely_store.ViewModels
                 }
             }
             // 100
-            if (SelectedCategory.Category != Ware.Category.All 
-                && SelectedMaterial.Material == Ware.Material.All 
+            if (SelectedCategory.Category != Ware.Category.All
+                && SelectedMaterial.Material == Ware.Material.All
                 && SearchString == "")
             {
                 using (var context = new JewerelyContext())
@@ -266,8 +266,8 @@ namespace Juwerely_store.ViewModels
                 }
             }
             //110
-            if (SelectedCategory.Category != Ware.Category.All 
-                && SelectedMaterial.Material != Ware.Material.All 
+            if (SelectedCategory.Category != Ware.Category.All
+                && SelectedMaterial.Material != Ware.Material.All
                 && SearchString == "")
             {
                 using (var context = new JewerelyContext())
@@ -277,8 +277,8 @@ namespace Juwerely_store.ViewModels
                 }
             }
             //111
-            if (SelectedCategory.Category != Ware.Category.All 
-                && SelectedMaterial.Material != Ware.Material.All 
+            if (SelectedCategory.Category != Ware.Category.All
+                && SelectedMaterial.Material != Ware.Material.All
                 && SearchString != "")
             {
                 using (var context = new JewerelyContext())
@@ -289,8 +289,8 @@ namespace Juwerely_store.ViewModels
                 }
             }
             //101
-            if (SelectedCategory.Category != Ware.Category.All 
-                && SelectedMaterial.Material == Ware.Material.All 
+            if (SelectedCategory.Category != Ware.Category.All
+                && SelectedMaterial.Material == Ware.Material.All
                 && SearchString != "")
             {
                 using (var context = new JewerelyContext())

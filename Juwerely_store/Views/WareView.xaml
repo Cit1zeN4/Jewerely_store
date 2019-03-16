@@ -153,7 +153,8 @@
                                             Width="25" Height="25" 
                                             Background="#FFFD9B50" 
                                             Style="{DynamicResource MaterialDesignFloatingActionButton}" 
-                                            BorderBrush="{x:Null}">
+                                            BorderBrush="{x:Null}" CommandParameter="{Binding WareId}" 
+                                            Command="{Binding ShowInfoCommand, Mode=OneWay, Source={StaticResource wareVM}}">
 
                                             <materialDesign:PackIcon Kind="Ring"/>
 
