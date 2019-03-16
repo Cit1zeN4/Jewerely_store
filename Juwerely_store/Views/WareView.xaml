@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:Juwerely_store.Views"
              xmlns:viewModel="clr-namespace:Juwerely_store.ViewModels"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
@@ -102,6 +103,66 @@
                     </Button>
 
                 </Grid>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+
+                    <ItemsControl Margin="20" HorizontalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Card Background="#FF242426" Margin="10" Width="180" Height="200">
+                                    <Grid>
+
+                                        <Grid.ColumnDefinitions>
+
+                                            <ColumnDefinition Width="10"/>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="10"/>
+
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+
+                                            <RowDefinition Height="2*"/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="10"/>
+
+                                        </Grid.RowDefinitions>
+
+                                        <Image Grid.Column="0" Grid.ColumnSpan="4" Stretch="UniformToFill" Source="/Res/DbImage/01.jpg"/>
+
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" Foreground="White" Text="{Binding}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
+
+                                        <Button 
+                                            Grid.Column="2" Grid.Row="2" 
+                                            Width="25" Height="25" 
+                                            Background="#FFFD9B50" 
+                                            Style="{DynamicResource MaterialDesignFloatingActionButton}" 
+                                            BorderBrush="{x:Null}">
+
+                                            <materialDesign:PackIcon Kind="Ring"/>
+
+                                        </Button>
+                                        
+                                    </Grid>
+                                </materialDesign:Card>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                        <system:String>Ring of power</system:String>
+                        <system:String>Ring of power</system:String>
+                        <system:String>Ring of power</system:String>
+                        <system:String>Ring of power</system:String>
+                        
+                    </ItemsControl>
+
+                </ScrollViewer>
 
             </Grid>
         </materialDesign:TransitioningContent>
