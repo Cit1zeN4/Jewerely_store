@@ -1,4 +1,5 @@
-﻿using Juwerely_store.Models;
+﻿using Juwerely_store.Helpers;
+using Juwerely_store.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Juwerely_store.ViewModels
 {
@@ -132,6 +134,14 @@ namespace Juwerely_store.ViewModels
 
     public class WareViewModel : INotifyPropertyChanged
     {
+        public WareViewModel()
+        {
+            using (var context = new JewerelyContext())
+            {
+                Wares = new ObservableCollection<Ware>(context.Wares.ToList());
+            }
+        }
+
         #region PropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -147,6 +157,8 @@ namespace Juwerely_store.ViewModels
 
         WareCategory selectedCategory;
         WareMaterial selectedMaterial;
+        string searchString = "";
+        ObservableCollection<Ware> wares;
 
         #endregion
 
@@ -188,6 +200,130 @@ namespace Juwerely_store.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        public string SearchString
+        {
+            get => searchString;
+            set
+            {
+                searchString = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<Ware> Wares
+        {
+            get => wares;
+            set
+            {
+                wares = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Command
+
+        #region Command Fields
+
+        BaseCommand searchCmd;
+
+        #endregion
+
+        #region Command Properties
+
+        public BaseCommand SearchCommand
+        {
+            get => searchCmd ?? (searchCmd = new BaseCommand(obj => Search()));
+        }
+
+        #endregion
+
+        #region Command Methods
+
+        private void Search()
+        {
+            // 000
+            if (SelectedCategory.Category == Ware.Category.All 
+                && SelectedMaterial.Material == Ware.Material.All 
+                && SearchString == "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares.ToList());
+                }
+            }
+            // 100
+            if (SelectedCategory.Category != Ware.Category.All 
+                && SelectedMaterial.Material == Ware.Material.All 
+                && SearchString == "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareCategory == SelectedCategory.Category).ToList());
+                }
+            }
+            //110
+            if (SelectedCategory.Category != Ware.Category.All 
+                && SelectedMaterial.Material != Ware.Material.All 
+                && SearchString == "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareCategory == SelectedCategory.Category && o.WareMaterial == SelectedMaterial.Material).ToList());
+                }
+            }
+            //111
+            if (SelectedCategory.Category != Ware.Category.All 
+                && SelectedMaterial.Material != Ware.Material.All 
+                && SearchString != "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareCategory == SelectedCategory.Category && o.WareMaterial == SelectedMaterial.Material && o.WareName.Contains(SearchString))
+                        .ToList());
+                }
+            }
+            //101
+            if (SelectedCategory.Category != Ware.Category.All 
+                && SelectedMaterial.Material == Ware.Material.All 
+                && SearchString != "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareCategory == SelectedCategory.Category && o.WareName.Contains(SearchString)).ToList());
+                }
+            }
+            //011
+            if (SelectedCategory.Category == Ware.Category.All
+                && SelectedMaterial.Material != Ware.Material.All
+                && SearchString != "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareMaterial == SelectedMaterial.Material && o.WareName.Contains(SearchString)).ToList());
+                }
+            }
+            //001
+            if (SelectedCategory.Category == Ware.Category.All
+                && SelectedMaterial.Material == Ware.Material.All
+                && SearchString != "")
+            {
+                using (var context = new JewerelyContext())
+                {
+                    Wares = new ObservableCollection<Ware>(context.Wares
+                        .Where(o => o.WareName.Contains(SearchString)).ToList());
+                }
+            }
+        }
+
+        #endregion
 
         #endregion
     }
