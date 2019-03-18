@@ -36,7 +36,10 @@ namespace Juwerely_store.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            BuyView buy = new BuyView();
+            buy.Show();
         }
+
+       
     }
 }

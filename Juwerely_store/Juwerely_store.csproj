@@ -106,6 +106,9 @@
     <Compile Include="Views\BrendView.xaml.cs">
       <DependentUpon>BrendView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BuyView.xaml.cs">
+      <DependentUpon>BuyView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\chainofstoresView.xaml.cs">
       <DependentUpon>chainofstoresView.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BrendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BuyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
