@@ -1,0 +1,384 @@
+﻿<UserControl x:Class="Juwerely_store.Views.VacansiesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Juwerely_store.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1024
+             ">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransitionContentSlide"  OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0:0.9}" Margin="-1,0,-14,0">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="360"/>
+                        <ColumnDefinition Width="360"/>
+                        <ColumnDefinition Width="360"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="300"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
+                                    Администратор
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 30 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Общение с клиентами, заключение
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" договоров;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Составление и контроль графика
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" работы;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Поддержание порядка в офисе в
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text=" течение рабочего дня."/>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Уверенный пользователь ПК;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Отличный коммуникатор.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button HorizontalAlignment="Right" Click="Button_Click" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Grid.Row="0">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 0" FontSize="26">
+                                    Системный
+                                    </TextBlock>
+                                    <TextBlock Foreground="White"  Margin="16 0 12 8" FontSize="26">
+                                    Администратор
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 40 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Настройка, установка программного
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" обеспечения;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Обслуживание торгового оборудо-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" вания (весы, кассы);" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Обслуживание оргтехники.
+                                    </CheckBox>
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Знание программы Супермаг;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Знание домена , настройки мини
+                                    </CheckBox>
+                                    <TextBlock Margin="35 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Text="ATC."/>
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button x:Name="Vac" Click="Vac_Click" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+
+                    <Grid Grid.Column="2" Grid.Row="0">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
+                                    Секретарь-референт
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 35 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        приём и распределение звонков,
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" в том числе на англ.яз. (мини-АТС);" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        ведение документооборота и дело-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" производства;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        ведение протоколов совещаний.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        умение работать в режиме много-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" задачности;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        владение английским языком;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        грамотная речь, владение сле-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" пым методом печати." Margin="35 4 16 0" FontSize="14"/>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button x:Name="Vacs" Click="Vacs_Click" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 0" FontSize="26">
+                                    Аналитик отдела
+                                    </TextBlock>
+                                    <TextBlock Foreground="White"  Margin="16 0 12 8" FontSize="26">
+                                    продаж
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 35 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        готовить различную аналитику,
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text="презентации, КП, ежедневные и" Margin="35 4 16 0" FontSize="14"/>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text="ежемесячные отчеты о работе"/>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text="отдела;"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Составление и контроль графика
+                                    </CheckBox>
+
+                                    <TextBlock Foreground="#FFFD9B50"  Text=" работы;" Margin="35 4 16 0" FontSize="14"/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        высшее законченное образование.
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text=""/>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Уверенный пользователь ПК;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        высокий уровень работоспособ-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text="ности, организованность," Margin="35 4 16 0" FontSize="14"/>
+                                    <TextBlock Foreground="#FFFD9B50"  Text="ответственность." Margin="35 4 16 0" FontSize="14"/>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button x:Name="S" Click="S_Click" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
+                                    Бухгалтер
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 28 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Ведение бух.учета ИП;
+                                    </CheckBox>
+
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        работа в 1C;
+                                    </CheckBox>
+
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        начисление заработной платы.
+                                    </CheckBox>
+
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Уверенный пользователь ПК;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Образование - не ниже среде
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50"  Text="специального." Margin="35 4 16 0" FontSize="14"/>
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button x:Name="m" Click="M_Click" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+
+                    <Grid Grid.Column="2" Grid.Row="1">
+                        <materialDesign:Card Background="#FF242426" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}" Padding="8" Height="275" Margin="19,0,17,0">
+                            <ScrollViewer>
+                                <StackPanel>
+
+                                    <TextBlock Foreground="White"  Margin="16 16 12 8" FontSize="26">
+                                    Продавец-кассир
+                                    </TextBlock>
+                                    <TextBlock Margin="16 0 12 8"  Text="от 20 000р." Foreground="White" FontSize="16"/>
+                                    <CheckBox  Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Опыт работы: 1–3 года;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Полная занятость.
+                                    </CheckBox>
+
+                                    <TextBlock Margin="16 16 12 8" FontSize="16" Foreground="#FFFD9B50"  Text="Должностные обязанности: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Постоянное общение с покупа-
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text="телями;"/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"   Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Идеальное знание ассортимента;
+                                    </CheckBox>
+
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14"  Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Ответственность за сохранность
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text="денежных средств."/>
+
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Требования к кандидату: "/>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Знание программы 1С, касса;
+                                    </CheckBox>
+
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Компьютерная грамотность MS
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="35 4 16 0" FontSize="14" Text="Office."/>
+                                    <TextBlock Margin="16 16 12 8"  FontSize="16" Foreground="#FFFD9B50"  Text="Условия: "/>
+                                    <CheckBox Margin="16 4 16 0"  FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Официальное трудоустройство;
+                                    </CheckBox>
+                                    <CheckBox Margin="16 4 16 0" FontSize="14" Foreground="#FFFD9B50"  Style="{StaticResource MaterialDesignUserForegroundCheckBox}" IsChecked="True">
+                                        Заработная плата
+                                    </CheckBox>
+                                    <TextBlock Foreground="#FFFD9B50" Margin="30 4 16 0" FontSize="14" Text="+ премия (по результатам работы). "/>
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" />
+                                    <StackPanel  Margin="8 0 8 8"  Orientation="Horizontal"  HorizontalAlignment="Right">
+                                        <Button x:Name="a" Click="A_Click" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}"  Width="30" Padding="2 0 0 0" materialDesign:RippleAssist.IsCentered="True">
+                                            <materialDesign:PackIcon  Kind="CheckAll" />
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
