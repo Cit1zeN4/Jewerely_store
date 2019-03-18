@@ -1,5 +1,6 @@
 ﻿using Juwerely_store.Helpers;
 using Juwerely_store.Models;
+using Juwerely_store.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -228,6 +229,7 @@ namespace Juwerely_store.ViewModels
         #region Command Fields
 
         BaseCommand searchCmd;
+        BaseCommand showInfoCmd;
 
         #endregion
 
@@ -236,6 +238,11 @@ namespace Juwerely_store.ViewModels
         public BaseCommand SearchCommand
         {
             get => searchCmd ?? (searchCmd = new BaseCommand(obj => Search()));
+        }
+
+        public BaseCommand ShowInfoCommand
+        {
+            get => showInfoCmd ?? (showInfoCmd = new BaseCommand(obj => ShowInfo((int)obj)));
         }
 
         #endregion
@@ -321,6 +328,16 @@ namespace Juwerely_store.ViewModels
                         .Where(o => o.WareName.Contains(SearchString)).ToList());
                 }
             }
+        }
+        private void ShowInfo(int id)
+        {
+            Ware ware;
+            using (var context = new JewerelyContext())
+            {
+                ware = context.Wares.Where(o => o.WareId == id).FirstOrDefault();
+            }
+            WareInfoView info = new WareInfoView(ware.WareName, ware.WareAbout, ware.ImageSource, ware.Price);
+            info.ShowDialog();
         }
 
         #endregion
